@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Belanja Toko</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Kalkulator Belanja</h2>
+
+        <div class="input-section">
+            <input type="text" id="namaBarang" placeholder="Nama Barang">
+            <input type="number" id="hargaBarang" placeholder="Harga (Rp)">
+            <input type="number" id="jumlahBarang" placeholder="Jumlah" min="1">
+            <button id="tambahBtn">Tambah</button>
+        </div>
+
+        <div class="member-section">
+            <input type="checkbox" id="isMember">
+            <label for="isMember">Pelanggan Member (Ekstra Diskon 5%)</label>
+        </div>
+
+        <table id="tabelBelanja">
+            <thead>
+                <tr>
+                    <th>Barang</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Subtotal</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="daftarBarang">
+            </tbody>
+        </table>
+
+        <div class="total-section">
+            <div class="summary-row">Subtotal: Rp <span id="subtotalBelanja">0</span></div>
+            <div class="summary-row diskon-text">Diskon (<span id="persenDiskon">0</span>%): -Rp <span id="nominalDiskon">0</span></div>
+            <h3 class="grand-total">Total Bayar: Rp <span id="totalBelanja">0</span></h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
